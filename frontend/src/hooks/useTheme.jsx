@@ -6,9 +6,9 @@ const VALID = ["light", "dark", "system"];
 function stored() {
   try {
     const v = localStorage.getItem(STORAGE_KEY);
-    return VALID.includes(v) ? v : "system";
+    return VALID.includes(v) ? v : "light";
   } catch {
-    return "system";
+    return "light";
   }
 }
 

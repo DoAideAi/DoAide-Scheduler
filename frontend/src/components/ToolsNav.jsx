@@ -14,7 +14,7 @@ export default function ToolsNav() {
   return (
     <nav className="tools-nav">
       <Link to="/" className="tools-nav-brand">
-        <em>DoAide</em>&nbsp;Scheduler
+        DoAide <em>|</em> Scheduler
       </Link>
       <div className="tools-nav-links">
         {TOOLS.map((t) => (

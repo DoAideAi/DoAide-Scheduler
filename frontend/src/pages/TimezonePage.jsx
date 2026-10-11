@@ -146,9 +146,9 @@ export default function TimezonePage() {
                       padding: "0.25rem 0.6rem",
                       borderRadius: "6px",
                       fontSize: "0.8rem",
-                      border: compareZones.includes(z.id) ? "1px solid #F0B429" : "1px solid rgba(255,255,255,0.12)",
-                      background: compareZones.includes(z.id) ? "rgba(240,180,41,0.1)" : "transparent",
-                      color: compareZones.includes(z.id) ? "#F0B429" : "#9CA3AF",
+                      border: compareZones.includes(z.id) ? "1px solid #0D9488" : "1px solid rgba(255,255,255,0.12)",
+                      background: compareZones.includes(z.id) ? "rgba(13,148,136,0.1)" : "transparent",
+                      color: compareZones.includes(z.id) ? "#0D9488" : "#9CA3AF",
                       cursor: "pointer",
                     }}
                   >
@@ -163,15 +163,15 @@ export default function TimezonePage() {
                 {conversions.map((c) => (
                   <div key={c.zone} className="calc-result-row">
                     <span>{c.label} ({c.diff})</span>
-                    <strong style={{ color: c.isBusiness ? "#F0B429" : "#9CA3AF" }}>
+                    <strong style={{ color: c.isBusiness ? "#0D9488" : "#9CA3AF" }}>
                       {c.time} · {c.date}
                     </strong>
                   </div>
                 ))}
 
                 {overlap.length > 0 && (
-                  <div style={{ marginTop: "1rem", padding: "0.75rem", borderRadius: "8px", background: "rgba(240,180,41,0.08)" }}>
-                    <strong style={{ fontSize: "0.85rem", color: "#F0B429" }}>Overlapping Business Hours</strong>
+                  <div style={{ marginTop: "1rem", padding: "0.75rem", borderRadius: "8px", background: "rgba(13,148,136,0.08)" }}>
+                    <strong style={{ fontSize: "0.85rem", color: "#0D9488" }}>Overlapping Business Hours</strong>
                     <p style={{ margin: "0.25rem 0 0", fontSize: "0.85rem", color: "#9CA3AF" }}>
                       {overlap.map((h) => `${h === 0 ? "12 AM" : h < 12 ? `${h} AM` : h === 12 ? "12 PM" : `${h - 12} PM`}`).join(", ")} (your time)
                     </p>

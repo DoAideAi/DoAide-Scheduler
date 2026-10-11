@@ -3,13 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --brand: #10B981;
-  --brand-dark: #059669;
-  --brand-light: #34D399;
+  --da-brand: #0D9488;
+  --da-brand-dark: #0B7C72;
+  --da-brand-light: #2DD4BF;
+  --da-bg: #FFFFFF;
+  --da-bg-alt: #F9FAFB;
+  --da-text: #111827;
+  --da-text-muted: #6B7280;
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
+  --da-bg: #0A0A0B;
+  --da-bg-alt: #111113;
+  --da-text: #F9FAFB;
+  --da-text-muted: #9CA3AF;
 }
 
 [data-theme="light"] {
@@ -18,7 +26,7 @@
 
 body {
   @apply bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .btn-primary {
@@ -70,7 +78,7 @@ body {
   margin-right: auto;
 }
 .tools-nav-brand em {
-  color: #F0B429;
+  color: #0D9488;
   font-style: normal;
 }
 .tools-nav-links {
@@ -87,20 +95,20 @@ body {
 }
 .tools-nav-link:hover,
 .tools-nav-link.active {
-  background: rgba(240, 180, 41, 0.1);
-  color: #F0B429 !important;
+  background: rgba(13, 148, 136, 0.1);
+  color: #0D9488 !important;
 }
 .tools-nav-cta {
   font-size: 0.85rem;
   padding: 0.4rem 1rem;
   border-radius: 8px;
-  background: #F0B429;
-  color: #0A0A0B !important;
+  background: #0D9488;
+  color: #fff !important;
   text-decoration: none;
   font-weight: 600;
   transition: background 150ms ease;
 }
-.tools-nav-cta:hover { background: #D4A017; }
+.tools-nav-cta:hover { background: #0B7C72; }
 
 .tool-main {
   padding: 2rem 1.5rem 4rem;
@@ -147,8 +155,8 @@ body {
 }
 .calc-input:focus {
   outline: none;
-  border-color: #F0B429;
-  box-shadow: 0 0 0 2px rgba(240, 180, 41, 0.15);
+  border-color: #0D9488;
+  box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.15);
 }
 .calc-select {
   display: block;
@@ -181,7 +189,7 @@ body {
   padding-top: 0.75rem;
   font-size: 1.1rem;
 }
-.calc-total strong { color: #F0B429; }
+.calc-total strong { color: #0D9488; }
 
 .tool-page .btn {
   display: inline-block;
@@ -193,10 +201,10 @@ body {
   text-decoration: none;
 }
 .tool-page .btn-primary {
-  background: #F0B429;
-  color: #0A0A0B;
+  background: #0D9488;
+  color: #fff;
 }
-.tool-page .btn-primary:hover { background: #D4A017; }
+.tool-page .btn-primary:hover { background: #0B7C72; }
 
 .share-buttons {
   display: flex;
@@ -221,7 +229,7 @@ body {
   cursor: pointer;
   transition: all 150ms ease;
 }
-.share-btn:hover { border-color: #F0B429; }
+.share-btn:hover { border-color: #0D9488; }
 .share-whatsapp:hover { color: #25D366 !important; border-color: #25D366; }
 .share-twitter:hover { color: #fff !important; }
 
@@ -245,8 +253,8 @@ body {
   transition: all 150ms ease;
 }
 .embed-tool-btn.active {
-  border-color: #F0B429;
-  background: rgba(240, 180, 41, 0.1);
+  border-color: #0D9488;
+  background: rgba(13, 148, 136, 0.1);
 }
 .embed-tool-btn strong { font-size: 0.9rem; }
 .embed-tool-btn span { font-size: 0.8rem; color: #9CA3AF; }
@@ -284,7 +292,7 @@ body {
 .blog-home-link {
   display: inline-block;
   font-size: 0.9rem;
-  color: #F0B429 !important;
+  color: #0D9488 !important;
   text-decoration: none;
   margin-bottom: 1rem;
 }
@@ -306,10 +314,10 @@ body {
   text-decoration: none;
   transition: border-color 0.2s;
 }
-.blog-card:hover { border-color: #F0B429; }
+.blog-card:hover { border-color: #0D9488; }
 .blog-card h2 { font-size: 1.15rem; color: #fff; margin: 0 0 0.5rem; }
 .blog-card p { color: #9CA3AF; font-size: 0.92rem; line-height: 1.5; margin: 0 0 0.75rem; }
-.blog-read-more { font-size: 0.9rem; font-weight: 600; color: #F0B429; }
+.blog-read-more { font-size: 0.9rem; font-weight: 600; color: #0D9488; }
 .blog-article { line-height: 1.7; }
 .blog-article h1 { font-size: 1.75rem; font-weight: 700; color: #fff; margin: 0 0 0.5rem; }
 .blog-meta { font-size: 0.85rem; color: #9CA3AF; margin: 0 0 2rem; }
@@ -318,7 +326,7 @@ body {
 .blog-article p { margin: 0 0 1rem; color: #E5E7EB; }
 .blog-article ul, .blog-article ol { margin: 0 0 1rem; padding-left: 1.5rem; }
 .blog-article li { margin-bottom: 0.5rem; }
-.blog-article a { color: #F0B429; }
+.blog-article a { color: #0D9488; }
 
 @media (max-width: 600px) {
   .tools-nav { gap: 0.5rem; padding: 0.5rem 1rem; }

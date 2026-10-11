@@ -175,7 +175,7 @@ export default function AvailabilityFinderPage() {
                   {overlap.map((o) => (
                     <div key={o.day} className="calc-result-row">
                       <span>{o.day}</span>
-                      <strong style={{ color: "#F0B429" }}>
+                      <strong style={{ color: "#0D9488" }}>
                         {hourLabel(o.start)} — {hourLabel(o.end)} ({o.hours}h)
                       </strong>
                     </div>

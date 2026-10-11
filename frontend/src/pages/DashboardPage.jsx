@@ -42,7 +42,7 @@ export default function DashboardPage() {
           { label: "Total Bookings", value: bookings.length, color: "text-brand-500" },
           { label: "Upcoming", value: upcoming.length, color: "text-blue-500" },
           { label: "Meeting Types", value: meetingTypes.length, color: "text-purple-500" },
-          { label: "Plan", value: user?.business?.plan?.toUpperCase() || "FREE", color: "text-amber-500" },
+          { label: "Plan", value: user?.business?.plan?.toUpperCase() || "FREE", color: "text-brand-500" },
         ].map((s) => (
           <div key={s.label} className="card p-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">{s.label}</p>

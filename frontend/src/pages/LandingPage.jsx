@@ -20,64 +20,47 @@ const DOAIDE_PRODUCTS = [
   { name: "Trade", url: "https://trade.doaide.com" },
 ];
 
-function RobotFace({ size = 32, color = "#F0B429" }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} aria-hidden="true">
-      <line x1="16" y1="6" x2="16" y2="2" stroke={color} strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="16" cy="1.5" r="1.5" fill={color} />
-      <rect x="5" y="6" width="22" height="17" rx="5" fill={color} />
-      <ellipse cx="11" cy="13" rx="2.5" ry="3" fill="#0A0A0B" />
-      <ellipse cx="21" cy="13" rx="2.5" ry="3" fill="#0A0A0B" />
-      <circle cx="11.5" cy="12.5" r="1" fill={color} opacity="0.6" />
-      <circle cx="21.5" cy="12.5" r="1" fill={color} opacity="0.6" />
-      <path d="M12 19Q16 22 20 19" stroke="#0A0A0B" strokeWidth="1.2" fill="none" strokeLinecap="round" />
-      <rect x="1" y="10" width="4" height="5" rx="2" fill={color} opacity="0.8" />
-      <rect x="27" y="10" width="4" height="5" rx="2" fill={color} opacity="0.8" />
-    </svg>
-  );
-}
-
 const FEATURES = [
   {
     title: "Smart Scheduling",
     desc: "Set availability rules and let AI find the best times for everyone. No more back-and-forth emails.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" /></svg>
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" /></svg>
     ),
   },
   {
     title: "Booking Links",
     desc: "Share personalized booking pages for each meeting type. Clients pick a time that works for them.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" /></svg>
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" /></svg>
     ),
   },
   {
     title: "Team Scheduling",
     desc: "Round-robin assignment and collective availability for team meetings. Fair distribution guaranteed.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" /></svg>
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" /></svg>
     ),
   },
   {
     title: "Calendar Sync",
     desc: "Two-way sync with Google Calendar, Outlook, and iCal. Changes reflect instantly across all calendars.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10" /><polyline points="1 20 1 14 7 14" /><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15" /></svg>
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10" /><polyline points="1 20 1 14 7 14" /><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15" /></svg>
     ),
   },
   {
     title: "Custom Branding",
     desc: "Branded booking pages with your logo, colors, and custom domain. Make it yours.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r="2.5" /><path d="M17.5 10.5c3 0 4.5 1.5 4.5 4v1h-4" /><circle cx="8.5" cy="6.5" r="2.5" /><path d="M2 15.5c0-2.5 1.5-4 4.5-4h4c3 0 4.5 1.5 4.5 4v1H2v-1z" /></svg>
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r="2.5" /><path d="M17.5 10.5c3 0 4.5 1.5 4.5 4v1h-4" /><circle cx="8.5" cy="6.5" r="2.5" /><path d="M2 15.5c0-2.5 1.5-4 4.5-4h4c3 0 4.5 1.5 4.5 4v1H2v-1z" /></svg>
     ),
   },
   {
     title: "Analytics & Insights",
     desc: "Track booking rates, popular times, no-shows, and meeting trends. Data-driven scheduling.",
     icon: (
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#F0B429" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0D9488" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
     ),
   },
 ];
@@ -148,7 +131,7 @@ function FaqSection() {
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 >
                   {item.q}
-                  <span className="ml-4 text-[#F0B429] text-xl flex-shrink-0">{openIndex === i ? "−" : "+"}</span>
+                  <span className="ml-4 text-[#0D9488] text-xl flex-shrink-0">{openIndex === i ? "−" : "+"}</span>
                 </button>
               </dt>
               {openIndex === i && (
@@ -195,7 +178,7 @@ function AuthCard() {
         <button
           className={`flex-1 py-2.5 text-sm font-medium border-b-2 transition-colors ${
             mode === "login"
-              ? "border-[#F0B429] text-[#F0B429]"
+              ? "border-[#0D9488] text-[#0D9488]"
               : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
           }`}
           onClick={() => setMode("login")}
@@ -205,7 +188,7 @@ function AuthCard() {
         <button
           className={`flex-1 py-2.5 text-sm font-medium border-b-2 transition-colors ${
             mode === "register"
-              ? "border-[#F0B429] text-[#F0B429]"
+              ? "border-[#0D9488] text-[#0D9488]"
               : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
           }`}
           onClick={() => setMode("register")}
@@ -226,7 +209,7 @@ function AuthCard() {
             <input
               type="text"
               placeholder="Business name"
-              className="w-full px-3 py-2.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-[#0A0A0B] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#F0B429] focus:ring-1 focus:ring-[#F0B429]/30"
+              className="w-full px-3 py-2.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-[#0A0A0B] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#0D9488] focus:ring-1 focus:ring-[#0D9488]/30"
               value={businessName}
               onChange={(e) => setBusinessName(e.target.value)}
               required
@@ -234,7 +217,7 @@ function AuthCard() {
             <input
               type="text"
               placeholder="Your full name"
-              className="w-full px-3 py-2.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-[#0A0A0B] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#F0B429] focus:ring-1 focus:ring-[#F0B429]/30"
+              className="w-full px-3 py-2.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-[#0A0A0B] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#0D9488] focus:ring-1 focus:ring-[#0D9488]/30"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
             />
@@ -243,7 +226,7 @@ function AuthCard() {
         <input
           type="email"
           placeholder="Email"
-          className="w-full px-3 py-2.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-[#0A0A0B] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#F0B429] focus:ring-1 focus:ring-[#F0B429]/30"
+          className="w-full px-3 py-2.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-[#0A0A0B] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#0D9488] focus:ring-1 focus:ring-[#0D9488]/30"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -251,7 +234,7 @@ function AuthCard() {
         <input
           type="password"
           placeholder="Password"
-          className="w-full px-3 py-2.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-[#0A0A0B] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#F0B429] focus:ring-1 focus:ring-[#F0B429]/30"
+          className="w-full px-3 py-2.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-[#0A0A0B] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#0D9488] focus:ring-1 focus:ring-[#0D9488]/30"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -259,7 +242,7 @@ function AuthCard() {
         />
         <button
           type="submit"
-          className="w-full py-2.5 bg-[#F0B429] text-[#0A0A0B] font-semibold rounded-lg hover:bg-[#D4A017] transition-colors disabled:opacity-50"
+          className="w-full py-2.5 bg-[#0D9488] text-white font-semibold rounded-lg hover:bg-[#0B7C72] transition-colors disabled:opacity-50"
           disabled={loading}
         >
           {loading ? "..." : mode === "login" ? "Sign In" : "Create Account"}
@@ -274,9 +257,8 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white dark:bg-[#0A0A0B]">
       <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
         <a href="https://doaide.com" className="flex items-center gap-2.5 no-underline">
-          <RobotFace size={28} color="#F0B429" />
           <span className="text-xl font-bold text-gray-900 dark:text-white">
-            DoAide <span className="text-[#F0B429]">Scheduler</span>
+            DoAide <span className="text-[#0D9488]">|</span> <span className="text-[#0D9488]">Scheduler</span>
           </span>
         </a>
         <nav className="flex items-center gap-4">
@@ -292,7 +274,7 @@ export default function LandingPage() {
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
                 Smart Meeting Scheduling{" "}
-                <span className="text-[#F0B429]">for Businesses</span>
+                <span className="text-[#0D9488]">for Businesses</span>
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-lg">
                 Share your booking link, let clients pick a time, and never double-book again.
@@ -300,15 +282,15 @@ export default function LandingPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8">
                 <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                  <svg className="w-4 h-4 text-[#F0B429]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
+                  <svg className="w-4 h-4 text-[#0D9488]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
                   Free forever
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                  <svg className="w-4 h-4 text-[#F0B429]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
+                  <svg className="w-4 h-4 text-[#0D9488]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
                   No credit card
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                  <svg className="w-4 h-4 text-[#F0B429]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
+                  <svg className="w-4 h-4 text-[#0D9488]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
                   20 meetings/month
                 </div>
               </div>
@@ -327,7 +309,7 @@ export default function LandingPage() {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {FEATURES.map((f) => (
-                <div key={f.title} className="p-6 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#0A0A0B] hover:border-[#F0B429]/30 transition-colors">
+                <div key={f.title} className="p-6 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#0A0A0B] hover:border-[#0D9488]/30 transition-colors">
                   <div className="mb-4">{f.icon}</div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{f.title}</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{f.desc}</p>
@@ -345,7 +327,7 @@ export default function LandingPage() {
             <div className="grid md:grid-cols-3 gap-8">
               {HOW_IT_WORKS.map((s) => (
                 <div key={s.step} className="text-center">
-                  <div className="w-12 h-12 rounded-full bg-[#F0B429] text-[#0A0A0B] text-xl font-bold flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 rounded-full bg-[#0D9488] text-white text-xl font-bold flex items-center justify-center mx-auto mb-4">
                     {s.step}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{s.title}</h3>
@@ -367,10 +349,10 @@ export default function LandingPage() {
                 <div
                   key={plan.name}
                   className={`p-8 rounded-xl border ${
-                    plan.featured ? "border-[#F0B429] ring-2 ring-[#F0B429]/20" : "border-gray-200 dark:border-gray-700"
+                    plan.featured ? "border-[#0D9488] ring-2 ring-[#0D9488]/20" : "border-gray-200 dark:border-gray-700"
                   } bg-white dark:bg-[#0A0A0B]`}
                 >
-                  {plan.featured && <span className="text-xs font-semibold text-[#F0B429] uppercase tracking-wide">Most Popular</span>}
+                  {plan.featured && <span className="text-xs font-semibold text-[#0D9488] uppercase tracking-wide">Most Popular</span>}
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-2">{plan.name}</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{plan.desc}</p>
                   <div className="mt-4 mb-6">
@@ -380,7 +362,7 @@ export default function LandingPage() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                        <svg className="w-4 h-4 text-[#F0B429] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
+                        <svg className="w-4 h-4 text-[#0D9488] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
                         {f}
                       </li>
                     ))}
@@ -389,7 +371,7 @@ export default function LandingPage() {
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                     className={`block w-full text-center py-3 rounded-lg font-semibold text-sm transition-colors cursor-pointer ${
                       plan.featured
-                        ? "bg-[#F0B429] text-[#0A0A0B] hover:bg-[#D4A017]"
+                        ? "bg-[#0D9488] text-white hover:bg-[#0B7C72]"
                         : "border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
                     }`}
                   >
@@ -429,34 +411,34 @@ export default function LandingPage() {
               No signup required. Use these tools instantly to optimize your meetings.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
-              <Link to="/calculator" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#F0B429]/50 transition-colors no-underline group">
+              <Link to="/calculator" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#0D9488]/50 transition-colors no-underline group">
                 <div className="text-2xl mb-3">&#x1F4B0;</div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#F0B429] transition-colors">Meeting Cost Calculator</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#0D9488] transition-colors">Meeting Cost Calculator</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Find out how much your meetings really cost per year.</p>
               </Link>
-              <Link to="/tools/meeting-planner" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#F0B429]/50 transition-colors no-underline group">
+              <Link to="/tools/meeting-planner" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#0D9488]/50 transition-colors no-underline group">
                 <div className="text-2xl mb-3">&#x1F916;</div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#F0B429] transition-colors">AI Meeting Planner</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#0D9488] transition-colors">AI Meeting Planner</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Generate structured meeting agendas with AI in seconds.</p>
               </Link>
-              <Link to="/tools/weekly-planner" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#F0B429]/50 transition-colors no-underline group">
+              <Link to="/tools/weekly-planner" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#0D9488]/50 transition-colors no-underline group">
                 <div className="text-2xl mb-3">&#x1F4C5;</div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#F0B429] transition-colors">Weekly Planner</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#0D9488] transition-colors">Weekly Planner</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Plan your week with time-blocking and category tracking.</p>
               </Link>
-              <Link to="/timezone" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#F0B429]/50 transition-colors no-underline group">
+              <Link to="/timezone" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#0D9488]/50 transition-colors no-underline group">
                 <div className="text-2xl mb-3">&#x1F30D;</div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#F0B429] transition-colors">Timezone Converter</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#0D9488] transition-colors">Timezone Converter</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Convert meeting times across timezones with overlap detection.</p>
               </Link>
-              <Link to="/tools/availability-finder" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#F0B429]/50 transition-colors no-underline group">
+              <Link to="/tools/availability-finder" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#0D9488]/50 transition-colors no-underline group">
                 <div className="text-2xl mb-3">&#x1F50D;</div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#F0B429] transition-colors">Availability Finder</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#0D9488] transition-colors">Availability Finder</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Find overlapping available slots across multiple schedules.</p>
               </Link>
-              <Link to="/templates-gallery" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#F0B429]/50 transition-colors no-underline group">
+              <Link to="/templates-gallery" className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0A0A0B] hover:border-[#0D9488]/50 transition-colors no-underline group">
                 <div className="text-2xl mb-3">&#x1F4C4;</div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#F0B429] transition-colors">Scheduling Templates</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#0D9488] transition-colors">Scheduling Templates</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">6 ready-made templates for standups, demos, interviews, and more.</p>
               </Link>
             </div>
@@ -474,7 +456,7 @@ export default function LandingPage() {
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="inline-block px-8 py-3.5 bg-[#F0B429] text-[#0A0A0B] text-lg font-semibold rounded-lg hover:bg-[#D4A017] transition-colors cursor-pointer"
+            className="inline-block px-8 py-3.5 bg-[#0D9488] text-white text-lg font-semibold rounded-lg hover:bg-[#0B7C72] transition-colors cursor-pointer"
           >
             Get Started Free
           </button>
@@ -487,37 +469,36 @@ export default function LandingPage() {
             <div>
               <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Product</h4>
               <div className="space-y-2 text-sm">
-                <Link to="/pricing" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline">Pricing</Link>
-                <a href="#features-heading" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline" onClick={(e) => { e.preventDefault(); document.getElementById("features-heading")?.scrollIntoView({ behavior: "smooth" }); }}>Features</a>
-                <a href="#faq-heading" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline" onClick={(e) => { e.preventDefault(); document.getElementById("faq-heading")?.scrollIntoView({ behavior: "smooth" }); }}>FAQ</a>
+                <Link to="/pricing" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline">Pricing</Link>
+                <a href="#features-heading" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline" onClick={(e) => { e.preventDefault(); document.getElementById("features-heading")?.scrollIntoView({ behavior: "smooth" }); }}>Features</a>
+                <a href="#faq-heading" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline" onClick={(e) => { e.preventDefault(); document.getElementById("faq-heading")?.scrollIntoView({ behavior: "smooth" }); }}>FAQ</a>
               </div>
             </div>
             <div>
               <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Free Tools</h4>
               <div className="space-y-2 text-sm">
-                <Link to="/calculator" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline">Meeting Cost Calculator</Link>
-                <Link to="/tools/meeting-planner" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline">AI Meeting Planner</Link>
-                <Link to="/tools/weekly-planner" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline">Weekly Planner</Link>
-                <Link to="/timezone" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline">Timezone Converter</Link>
-                <Link to="/tools/availability-finder" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline">Availability Finder</Link>
-                <Link to="/templates-gallery" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline">Scheduling Templates</Link>
-                <Link to="/embed" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline">Embed Widgets</Link>
-                <Link to="/blog" className="block text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline">Blog</Link>
+                <Link to="/calculator" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline">Meeting Cost Calculator</Link>
+                <Link to="/tools/meeting-planner" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline">AI Meeting Planner</Link>
+                <Link to="/tools/weekly-planner" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline">Weekly Planner</Link>
+                <Link to="/timezone" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline">Timezone Converter</Link>
+                <Link to="/tools/availability-finder" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline">Availability Finder</Link>
+                <Link to="/templates-gallery" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline">Scheduling Templates</Link>
+                <Link to="/embed" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline">Embed Widgets</Link>
+                <Link to="/blog" className="block text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline">Blog</Link>
               </div>
             </div>
             <div className="col-span-2">
               <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">DoAide Products</h4>
               <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
                 {DOAIDE_PRODUCTS.map((p) => (
-                  <a key={p.name} href={p.url} className="text-gray-500 dark:text-gray-400 hover:text-[#F0B429] no-underline">{p.name}</a>
+                  <a key={p.name} href={p.url} className="text-gray-500 dark:text-gray-400 hover:text-[#0D9488] no-underline">{p.name}</a>
                 ))}
               </div>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-gray-200 dark:border-gray-800">
             <a href="https://doaide.com" className="flex items-center gap-2 no-underline">
-              <RobotFace size={16} color="#F0B429" />
-              <span className="text-sm text-gray-500 dark:text-gray-400">doaide.com</span>
+              <span className="inline-block px-2.5 py-1 bg-[#0D9488]/10 text-[#0D9488] text-xs font-semibold rounded-full">A DoAide Product</span>
             </a>
             <span className="text-sm text-gray-400 dark:text-gray-500">&copy; {new Date().getFullYear()} DoAide. All rights reserved.</span>
           </div>

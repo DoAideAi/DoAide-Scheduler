@@ -21,7 +21,7 @@ const TIME_SLOTS = [
 
 const CATEGORIES = [
   { value: "deep-work", label: "Deep Work", color: "#3B82F6" },
-  { value: "meetings", label: "Meetings", color: "#F0B429" },
+  { value: "meetings", label: "Meetings", color: "#0D9488" },
   { value: "admin", label: "Admin", color: "#9CA3AF" },
   { value: "break", label: "Break", color: "#10B981" },
   { value: "personal", label: "Personal", color: "#A78BFA" },

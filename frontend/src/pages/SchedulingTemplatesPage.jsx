@@ -67,8 +67,8 @@ export default function SchedulingTemplatesPage() {
                         borderRadius: "999px",
                         fontSize: "0.75rem",
                         fontWeight: 600,
-                        background: "rgba(240,180,41,0.1)",
-                        color: "#F0B429",
+                        background: "rgba(13,148,136,0.1)",
+                        color: "#0D9488",
                       }}
                     >
                       {s}
@@ -81,8 +81,8 @@ export default function SchedulingTemplatesPage() {
                     display: "inline-block",
                     padding: "0.4rem 1rem",
                     borderRadius: "6px",
-                    background: "#F0B429",
-                    color: "#0A0A0B",
+                    background: "#0D9488",
+                    color: "#fff",
                     fontWeight: 600,
                     fontSize: "0.85rem",
                     textDecoration: "none",

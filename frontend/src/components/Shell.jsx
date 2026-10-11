@@ -23,7 +23,7 @@ export default function Shell() {
         <div className="p-4 border-b border-gray-200 dark:border-gray-700">
           <Link to="/" className="flex items-center gap-2">
             <span className="text-2xl font-bold text-brand-500">S</span>
-            <span className="font-semibold text-gray-900 dark:text-white">DoAide Scheduler</span>
+            <span className="font-semibold text-gray-900 dark:text-white">DoAide <span className="text-brand-500">|</span> Scheduler</span>
           </Link>
         </div>
 

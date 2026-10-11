@@ -152,7 +152,7 @@ export default function MeetingSchedulerPage() {
 
                 {result.tips && result.tips.length > 0 && (
                   <>
-                    <h4 style={{ margin: "0 0 0.5rem", fontSize: "0.9rem", color: "#F0B429" }}>
+                    <h4 style={{ margin: "0 0 0.5rem", fontSize: "0.9rem", color: "#0D9488" }}>
                       Tips
                     </h4>
                     <ul style={{ margin: 0, paddingLeft: "1.25rem", color: "#9CA3AF", fontSize: "0.85rem" }}>
