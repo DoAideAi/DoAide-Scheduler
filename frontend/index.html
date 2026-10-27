@@ -22,7 +22,92 @@
     }
     </script>
       <script defer src="https://analytics.doaide.com/script.js" data-website-id="c0d8e6cd-97f4-4da8-bf7c-2c1cf60da054"></script>
-</head>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DoAide Scheduler" />
+    <meta property="og:title" content="DoAide Scheduler — Free Online Appointment Booking &amp; Scheduling" />
+    <meta property="og:description" content="Share your booking link, let clients pick a time and never double-book again. Free meeting scheduler with Google Calendar sync on Pro." />
+    <meta property="og:url" content="https://scheduler.doaide.com/" />
+    <meta property="og:image" content="https://scheduler.doaide.com/og-scheduler.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DoAide Scheduler — Free Online Appointment Booking &amp; Scheduling" />
+    <meta name="twitter:description" content="Share your booking link, let clients pick a time and never double-book again. Free meeting scheduler with Google Calendar sync on Pro." />
+    <meta name="twitter:image" content="https://scheduler.doaide.com/og-scheduler.png" />
+    <!-- JSON-LD: per-route, rewritten by scripts/prerender-routes.mjs and useSEO -->
+    <script type="application/ld+json" data-seo-jsonld>
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "DoAide Scheduler",
+          "url": "https://scheduler.doaide.com",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "description": "AI-powered meeting scheduling with booking links, calendar sync, and team scheduling.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "name": "Free"
+            },
+            {
+              "@type": "Offer",
+              "price": "12",
+              "priceCurrency": "USD",
+              "name": "Pro"
+            },
+            {
+              "@type": "Offer",
+              "price": "25",
+              "priceCurrency": "USD",
+              "name": "Team"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does DoAide Scheduler prevent double-booking?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It syncs with your calendar in real-time. When someone books a slot, it's immediately blocked across all connected calendars."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I set different availability for different meeting types?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Each meeting type has its own availability rules, buffer times, and duration settings."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does it work with Google Calendar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. On the Pro plan, DoAide Scheduler connects to Google Calendar: your busy times block booking slots and new bookings are added to your calendar. Outlook and Apple Calendar are not supported yet."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there a free plan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The Free plan includes 20 meetings per month with one meeting type. No credit card required."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
