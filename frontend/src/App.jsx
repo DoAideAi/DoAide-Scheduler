@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "./hooks/useAuth";
 import Shell from "./components/Shell";
 import LandingPage from "./pages/LandingPage";
@@ -19,6 +19,7 @@ import EmbedPage from "./pages/EmbedPage";
 import MeetingSchedulerPage from "./pages/MeetingSchedulerPage";
 import WeeklyPlannerPage from "./pages/WeeklyPlannerPage";
 import BlogLayout, { ARTICLES, BlogIndex } from "./pages/BlogLayout";
+import useSEO from "./hooks/useSEO";
 
 function Protected({ children }) {
   const { user, loading } = useAuth();
@@ -28,6 +29,7 @@ function Protected({ children }) {
 }
 
 export default function App() {
+  useSEO(useLocation().pathname.replace(/\/+$/, "") || "/");
   const { user, loading } = useAuth();
 
   if (loading) {
